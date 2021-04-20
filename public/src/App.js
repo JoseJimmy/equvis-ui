@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react'
 import { Component } from 'react'
 import React from "react";
+import Navtree from "./components/vega/Navtree";
 
 import { Navigation } from './components/navigation'
 import { Header } from './components/header'
 import { Features } from './components/features'
 import { Services } from './components/services'
 import { Gallery } from './components/gallery'
+import { Testimonials } from './components/testimonials'
 import { Team } from './components/Team'
 import { Contact } from './components/contact'
 // import JsonData from './data/data.json'
 import SmoothScroll from 'smooth-scroll'
 import Fab from '@material-ui/core/Fab';
 import {BrowserRouter,HashRouter,Route,Switch} from "react-router-dom"
-import Chart from './components/charts'
+import Chart from './components/charts1'
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 700,
   speedAsDuration: true,
@@ -77,7 +79,7 @@ class App extends Component{
             </HashRouter>
             </Switch>
           </Route>
-          <Route exact path="/charts"><Chart /></Route>
+          <Route exact path="/charts"><Chart style={style}/></Route>
         </Switch>
       </BrowserRouter>
       </React.Fragment>)
